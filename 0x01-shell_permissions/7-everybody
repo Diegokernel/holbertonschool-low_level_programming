@@ -1,2 +1,2 @@
 #!/bin/bash
-chmode 111 hello
+chmode u+x,g+x,o+x hello
