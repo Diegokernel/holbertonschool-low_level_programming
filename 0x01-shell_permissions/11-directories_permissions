@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -aR 111 ./
+chmod -aR ugo+x ./
