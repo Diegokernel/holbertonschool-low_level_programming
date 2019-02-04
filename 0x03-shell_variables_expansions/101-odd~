@@ -1,0 +1,2 @@
+#!/bin/bash
+printf ls-1{0..0..2}
