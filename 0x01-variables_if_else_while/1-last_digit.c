@@ -21,7 +21,6 @@ int main(void)
 	else if (last == 0)
 		printf("%s %i %s %i and is 0\n", d, n, a, last);
 	else
-		(last < 6 && n != 0)
 		printf("%s %i %s %i and is less than 6 and not 0\n", d, n, a, last);
 	return (0);
 }
