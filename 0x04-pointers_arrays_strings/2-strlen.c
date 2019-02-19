@@ -1,9 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _strlen - check the code for Holberton School students.
+ * @s : check
+ * @i : check
+ * Return: i.
  */
 int _strlen(char *s)
 {
@@ -11,5 +12,5 @@ int _strlen(char *s)
 
 	while (*s++)
 		i++;
-	return i;
+	return (i);
 }

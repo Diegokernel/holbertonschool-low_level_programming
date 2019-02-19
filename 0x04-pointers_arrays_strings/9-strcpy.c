@@ -1,8 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _strcpy - check the code for Holberton School students.
+ * @dest : check
+ * @src : check
  * Return: Always 0.
  */
 char *_strcpy(char *dest, char *src)
@@ -13,7 +14,7 @@ char *_strcpy(char *dest, char *src)
 	{
 		j++;
 			}
-	for (i =0 ;i < j; i++)
+	for (i = 0 ; i < j ; i++)
 	{
 		dest[i] = src[i];
 	}

@@ -1,13 +1,14 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_rev - check the code for Holberton School students.
+ * @s : check
  * Return: Always 0.
  */
 void print_rev(char *s)
 {
-	int i = 0;
+	int i;
+	i = 0;
 	while (s[i] != '\0')
 	{
 		i++;

@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * puts_half - check the code for Holberton School students.
+ * @str : check
  * Return: Always 0.
  */
 void puts_half(char *str)

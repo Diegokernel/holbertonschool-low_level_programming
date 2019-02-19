@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * rev_string - check the code for Holberton School students.
+ * @s : check
  * Return: Always 0.
  */
 void rev_string(char *s)
@@ -15,7 +15,6 @@ void rev_string(char *s)
 		i++;
 			}
 	i -= 1;
-	
 	for ( ; i > j; i--)
 	{
 		a = s[j];
