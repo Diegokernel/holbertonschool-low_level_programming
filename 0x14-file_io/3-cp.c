@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		if (filer == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		filew = write(fileou, buf, filer);
-		if (filew == -1)
+		if (filew != filer || filer == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]), exit(99);
 	} while (filer == 1024);
 	filecl = close(filein);
