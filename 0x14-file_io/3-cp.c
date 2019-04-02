@@ -20,8 +20,8 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]), exit(99);
 	do {
 		filer = read(filein, buf, 1024);
-	if (filer == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+		if (filer == -1)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 		filew = write(fileou, buf, filer);
 		if (filew == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]), exit(99);
