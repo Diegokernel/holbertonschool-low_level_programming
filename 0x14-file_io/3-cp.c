@@ -13,23 +13,19 @@ int main(int ac, char **av)
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	filein = open(av[1], O_RDONLY);
-	if (av[1] == NULL)
+	if (filein == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	fileou = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR
-		      | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
-	if (av[2] == NULL)
+	fileou = open(av[2], O_TRUNC | O_CREAT | O_WRONLY, 0664);
+	if (fileou == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]), exit(99);
-	filer = read(filein, buf, 1024);
+	do {
+		filer = read(filein, buf, 1024);
 	if (filer == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	while (filer != 0)
-	{
 		filew = write(fileou, buf, filer);
-		if (filer == -1 || filew != filer)
+		if (filew == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[2]), exit(99);
-		if (filer == -1)
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-	}
+	} while (filer == 1024);
 	filecl = close(filein);
 	if (filecl == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", filein), exit(100);
