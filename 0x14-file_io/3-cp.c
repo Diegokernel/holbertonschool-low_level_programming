@@ -8,7 +8,7 @@
 int main(int ac, char **av)
 {
 	int filein, fileou, filer, filew, filecl;
-	char *buf[1024];
+	char buf[1024];
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
