@@ -8,7 +8,7 @@
  * @size: lenght of the array
  * Return: Nothing
  */
-unsigned int partition(int *array, int low, int high, size_t size);
+int partition(int *array, int low, int high, size_t size)
 {
 	int i, j, pivot, temp;
 
@@ -28,7 +28,9 @@ unsigned int partition(int *array, int low, int high, size_t size);
 	pivot = i + 1;
 	if (pivot != high && array[pivot] != array[high])
 	{
-		swap_list(array, pivot, high);
+		temp = array[pivot];
+			array[pivot] = array[high];
+			array[high] = temp;
 		print_array(array, size);
 	}
 
